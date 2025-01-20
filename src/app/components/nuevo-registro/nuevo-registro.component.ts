@@ -19,7 +19,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 export class NuevoRegistroComponent {
   paciente: Paciente = new Paciente();
   uploader: FileUploader = new FileUploader({
-    url: 'https://api-ejemplo.com/upload',
+    url: 'http://localhost:5000/api/pacientes/upload',
     allowedFileType: ['image'],
     maxFileSize: 20 * 1024 * 1024,
   });
