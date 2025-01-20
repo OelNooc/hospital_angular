@@ -1,0 +1,11 @@
+<h2>Resultados de la Búsqueda</h2>
+<div *ngIf="resultados.length > 0; else noResultados">
+  <ul>
+    <li *ngFor="let paciente of resultados">
+      {{ paciente.nombre }} - {{ paciente.rut }}
+    </li>
+  </ul>
+</div>
+<ng-template #noResultados>
+  <p>No se encontraron resultados.</p>
+</ng-template>

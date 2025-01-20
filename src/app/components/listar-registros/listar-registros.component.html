@@ -1,0 +1,12 @@
+<h2>Lista Completa de Pacientes</h2>
+<div *ngIf="pacientes.length > 0; else noPacientes">
+  <ul>
+    <li *ngFor="let paciente of pacientes">
+      <img [src]="paciente.fotoPersonal" alt="Foto de {{ paciente.nombre }}" width="50" />
+      {{ paciente.nombre }} {{ paciente.edad }}
+    </li>
+  </ul>
+</div>
+<ng-template #noPacientes>
+  <p>No hay registros disponibles.</p>
+</ng-template>

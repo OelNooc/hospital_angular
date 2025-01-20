@@ -1,0 +1,22 @@
+<h2>Actualizar Registro</h2>
+<form (ngSubmit)="actualizarPaciente()">
+  <label>RUT:</label>
+  <input type="text" [(ngModel)]="paciente.rut" name="rut" required />
+
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="paciente.nombre" name="nombre" required />
+
+  <label>Edad:</label>
+  <input type="number" [(ngModel)]="paciente.edad" name="edad" required />
+
+  <label>Sexo:</label>
+  <select [(ngModel)]="paciente.sexo" name="sexo" required>
+    <option value="Masculino">Masculino</option>
+    <option value="Femenino">Femenino</option>
+  </select>
+
+  <label>Enfermedad:</label>
+  <input type="text" [(ngModel)]="paciente.enfermedad" name="enfermedad" required />
+
+  <button type="submit">Actualizar</button>
+</form>

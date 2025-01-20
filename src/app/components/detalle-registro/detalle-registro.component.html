@@ -1,0 +1,9 @@
+<h2>Detalle del Registro</h2>
+<div *ngIf="paciente">
+  <p>Nombre: {{ paciente.nombre }}</p>
+  <p>Edad: {{ paciente.edad }}</p>
+  <p>Sexo: {{ paciente.sexo }}</p>
+  <p>Enfermedad: {{ paciente.enfermedad }}</p>
+  <a [routerLink]="['/registro/actualizar', paciente.rut]">Actualizar</a>
+  <button (click)="eliminarRegistro()">Eliminar</button>
+</div>

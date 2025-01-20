@@ -1,0 +1,7 @@
+<h2>Lista de Pacientes</h2>
+<ul>
+  <li *ngFor="let paciente of pacientes">
+    {{ paciente.nombre }} {{ paciente.rut }}
+    <a [routerLink]="['/registro/detalle', paciente.rut]">Ver Detalle</a>
+  </li>
+</ul>

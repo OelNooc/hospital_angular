@@ -1,0 +1,6 @@
+<h2>Buscar Registro</h2>
+<form (ngSubmit)="buscar()">
+  <label>Buscar por nombre o RUT:</label>
+  <input type="text" [(ngModel)]="searchQuery" name="searchQuery" required />
+  <button type="submit">Buscar</button>
+</form>
